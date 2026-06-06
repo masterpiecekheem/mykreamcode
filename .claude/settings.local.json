@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell($env:PATH += \";C:\\\\Program Files\\\\Git\\\\bin\"; cd \"c:\\\\Users\\\\voice\\\\Documents\\\\AI\\\\mycreamcode\"; git add .; git commit -m \"Initial commit: SEO-optimized discount code site\")"
+    ]
+  }
+}

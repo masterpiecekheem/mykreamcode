@@ -332,10 +332,115 @@
     footer a { color: rgba(255,255,255,.5); text-decoration: none; }
     footer a:hover { color: var(--white); }
 
+    /* ── KREAM Referral Banner ── */
+    .kream-banner {
+      background: #000;
+      color: var(--white);
+      padding: 36px 20px;
+    }
+    .kream-banner-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      text-align: center;
+    }
+    .kream-logo-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff;
+      color: #000;
+      font-weight: 800;
+      font-size: .8rem;
+      letter-spacing: 1.5px;
+      padding: 4px 14px;
+      border-radius: 999px;
+      text-transform: uppercase;
+    }
+    .kream-banner h2 {
+      font-size: clamp(1.1rem, 3vw, 1.5rem);
+      font-weight: 800;
+      letter-spacing: -0.3px;
+    }
+    .kream-banner p {
+      font-size: .9rem;
+      color: rgba(255,255,255,.7);
+      max-width: 460px;
+    }
+    .kream-code-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .kream-code-box {
+      background: #1a1a1a;
+      border: 2px dashed rgba(255,255,255,.35);
+      border-radius: 10px;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .kream-code-label {
+      font-size: .72rem;
+      font-weight: 600;
+      color: rgba(255,255,255,.5);
+      letter-spacing: .5px;
+    }
+    .kream-code-value {
+      font-family: 'Courier New', monospace;
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: 3px;
+    }
+    .kream-copy-btn {
+      background: #fff;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 22px;
+      font-size: .88rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: background .2s, color .2s;
+      white-space: nowrap;
+    }
+    .kream-copy-btn:hover { background: #eee; }
+    .kream-copy-btn.copied { background: #4CAF50; color: #fff; }
+    .kream-link-btn {
+      display: inline-block;
+      border: 1.5px solid rgba(255,255,255,.35);
+      color: rgba(255,255,255,.85);
+      border-radius: 8px;
+      padding: 11px 22px;
+      font-size: .88rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background .2s, border-color .2s;
+      white-space: nowrap;
+    }
+    .kream-link-btn:hover {
+      background: rgba(255,255,255,.08);
+      border-color: rgba(255,255,255,.6);
+    }
+    .kream-benefit {
+      font-size: .78rem;
+      color: rgba(255,255,255,.45);
+    }
+
     /* ── Responsive ── */
     @media (max-width: 600px) {
       .header-inner nav { display: none; }
       .code-grid { grid-template-columns: 1fr; }
+      .kream-code-row { flex-direction: column; width: 100%; }
+      .kream-code-box { width: 100%; justify-content: center; }
+      .kream-copy-btn, .kream-link-btn { width: 100%; text-align: center; }
     }
   </style>
 </head>
@@ -346,6 +451,7 @@
   <div class="header-inner">
     <a href="https://mykreamcode.com/" class="logo">My<span>Kream</span>Code</a>
     <nav>
+      <a href="#kream">크림 추천인</a>
       <a href="#codes">할인코드</a>
       <a href="#how-to">사용방법</a>
     </nav>
@@ -357,6 +463,26 @@
   <p class="hero-badge">2026 최신 업데이트</p>
   <h1>프로모션 할인코드 모음</h1>
   <p>쿠팡·무신사·SSG·지그재그 등 인기 쇼핑몰의<br>최신 할인코드를 한 곳에서 확인하고 바로 복사하세요.</p>
+</section>
+
+<!-- ── KREAM Referral Banner ── -->
+<section class="kream-banner" id="kream" aria-label="크림 추천인코드">
+  <div class="kream-banner-inner">
+    <span class="kream-logo-tag">KREAM 크림</span>
+    <h2>크림 신규 가입 시 추천인코드 입력하고 혜택 받으세요</h2>
+    <p>크림 회원가입 → 추천인코드 입력 → 포인트·할인 즉시 지급.<br>아래 코드를 복사해 가입 시 입력해주세요.</p>
+    <div class="kream-code-row">
+      <div class="kream-code-box">
+        <div>
+          <p class="kream-code-label">추천인코드</p>
+          <p class="kream-code-value">NYFKZX7Y7</p>
+        </div>
+      </div>
+      <button class="kream-copy-btn" onclick="copyCode(this,'NYFKZX7Y7')" type="button">코드 복사</button>
+      <a class="kream-link-btn" href="https://kream.co.kr" target="_blank" rel="noopener noreferrer">크림 바로가기 →</a>
+    </div>
+    <p class="kream-benefit">가입 후 추천인코드 입력 시 신규 회원 혜택 자동 적용</p>
+  </div>
 </section>
 
 <!-- ── Main ── -->
